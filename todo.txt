@@ -1,0 +1,69 @@
+what's new section
+personnal informations (routine + alimentation)
+
+BASH 
+
+pwd
+ls
+cd
+mkdir
+cp
+mv
+rm
+grep
+zip
+unzip
+./
+ps
+
+
+
+SQL
+
+create table
+insert into
+select from where like %d %s
+group by
+order by
+count()
+primary key
+foreign key (references)
+sequence
+
+
+
+HTML
+
+div h1 p span a img nav header footer ul ol li th td hr button
+
+
+
+CSS
+
+display
+justify-content
+align-items
+background-color
+color
+width
+height
+min-width
+min-height
+margin
+padding
+border
+border-radius
+font-weight
+font-style
+font-size
+text-decoration
+text-align
+
+
+
+JavaScript
+
+types
+variable declaration
+function declaration
+native functions
