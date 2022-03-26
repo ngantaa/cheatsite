@@ -13,12 +13,6 @@
                         <a href="./index.html">Accueil</a>
                     </li>
                     <li>
-                        <a href="./bash.html">Bash</a>
-                    </li>
-                    <li>
-                        <a href="./sql.html">SQL</a>
-                    </li>
-                    <li>
                         <a href="" class="disabled">HTML</a>
                     </li>
                     <li>
@@ -26,6 +20,12 @@
                     </li>
                     <li>
                         <a href="./js.html">JavaScript</a>
+                    </li>
+                    <li>
+                        <a href="./bash.html">Bash</a>
+                    </li>
+                    <li>
+                        <a href="./sql.html">SQL</a>
                     </li>
                 </ul>
             </nav>
@@ -36,13 +36,155 @@
             <div id="ban3">
             </div>
             <div class="main-content">
-                
+                <h1>HTML - Introduction</h1>
+                <h2>Qu'est ce que le HTML</h2>
+                <p>
+                    Le HTML, pour HyperText Markup Language, est un langage de balisage destiné à représenter le contenu d'une page web. 
+                    Une page web est composée de nombreux éléments tels que du texte, des images, des liens hypertextes ou des formulaires de contact 
+                    qui la caractérisent. Le langage HTML permet d'indiquer au navigateur la fonction des différents éléments du contenu. Ainsi, le navigateur 
+                    sera en mesure de distinguer un titre d'un simple paragraphe, et afficher de les afficher de façon convenable.<br /><br />
+                    Le HTML n'est en revanche pas responsable de la mise en forme du contenu. Pour placer les éléments sur la page, ajouter des couleurs ou modifier la taille 
+                    de certaines portions de textes, le HTML doit être couplé à un autre langage : le CSS, acronyme de "Cascading Style Sheets".<br />
+                    Le HTML n'est donc utilisé que pour remplir une page web de contenu "brut".
+                </p>
+                <h2>Où écrit-on du HTML</h2>
+                <p>
+                    Nous allons maintenant créer un site web minimaliste, afin de vous familiariser avec la syntaxe du HTML.<br />
+                    Pour cela, munissez-vous d'un ordinateur, et ouvrez-y votre éditeur de texte préféré. Il faut néanmoins que cet éditeur soit capable d'enregistrer 
+                    un fichier au format HTML. Nous préfèrerons les éditeurs tels que le bloc-note, ou les applications comme notepad++, sublimtext, atom, bracket, et pour les plus téméraires vim ou emacs 
+                    aux éditeurs de textes comme Microsoft Word ou OpenOffice Writer.<br />
+                    Une fois l'éditeur de texte ouvert, créez un fichier nommé "index.html" .
+                </p>
+                <h2>Comment écrit-on du HTML</h2>
+                <p>
+                    Le langage HTML utilise des balises pour repérer les différents éléments. Les balises sont des chaînes de caractères de la forme "&lt;something&gt;".<br />
+                    Généralement, les balises se trouvent par deux et encadrent leur contenu. Par exemple, pour indiquer un titre de haute importance sur une page web, on utilise la balise &lt;h1&gt; de la manière suivante :<br /><br />
+                    <em>&lt;h1&gt;Ceci est un titre&lt;/h1&gt;</em><br /><br />
+                    La balise &lt;h1&gt; est alors appelée balise ouvrante, et la balise &lt;/h1&gt; est appelée balise fermante. Si la majorité des balises fonctionnent par paire, il en existe également ne nécéssitant pas d'être associée à 
+                    une balise fermante. c'est par exemple le cas de la balise &lt;br&gt;. Cette balise ajoute un retour à la ligne et est donc "vide", elle n'a pas de contenu.<br />
+                    Assez de théorie pour le moment, passons à la pratique.
+                </p>
+                <h2>Votre premier fichier HTML</h2>
+                <p>
+                    Reprenez le fichier "index.html" crée précédemment et ajoutez-y les lignes suivantes :
+                    <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;                                 
+&lt;html&gt;                                          
+  &lt;head&gt;                                        
+    &lt;meta charset="utf-8" /&gt;                    
+    &lt;title&gt;Un onglet nommé Jason&lt;/title&gt;        
+  &lt;/head&gt;                                       
+  &lt;body&gt;                                        
+    &lt;h1&gt;Hello World&lt;/h1&gt;                        
+  &lt;/body&gt;                                       
+&lt;html&gt;                                          
+</code>
+                    </pre>
+                    Enregistrez le ; vous pouvez alors ouvrir le fichier avec votre navigateur.<br />
+                    Votre navigateur traite le fichier comme étant du HTML valide, l'interprète et affiche le résultat<br /><br />
+                    Nous allons détailler ces lignes une à une. La première ligne, <code>&lt;!DOCTYPE html&gt;</code> indique au navigateur que le 
+                    contenu du document est du HTML.
+                    La seconde ligne est la balise ouvrante <code>&lt;html&gt;</code>. On remarque par ailleurs que cette balise est fermée dans la dernière ligne du document avec la balise fermante <code>&lt;/html&gt;</code>.<br /><br />
+                    Nous voyons ensuite une balise <code>&lt;head&gt;</code> qui présente des métadonnées associées à la page web. Dans notre exemple, la balise <code>&lt;meta&gt;</code> indique au navigateur que le document HTML est encodé 
+                    en suivant la norme "UTF-8". Cette information est indispensable afin que le navigateur puisse afficher des caractères spéciaux tels que les lettres avec accents. Sans cette balise, la plupart des navigateurs seraient tout 
+                    de même capable de bien afficher les accents, cependant il est tout de même nécessaire de l'indiquer pour une meilleure compatibilité.<br /><br />
+                    La balise <code>&lt;title&gt;</code> encadre le texte qui sera affiché dans l'onglet dans lequel sera affiché la page.<br />
+                    Enfin, la balise restante, <code>&lt;h1&gt;</code> est la première balise dont nous avons parlé et indique un titre.
+                </p>
+                <h2>Principales balises</h2>
+                <table>
+                    <tr>
+                        <td>&lt;h1&gt; &lt;/h1&gt;</td>
+                        <td>Titre</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;p&gt; &lt;/p&gt;</td>
+                        <td>Paragraphe</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;div&gt; &lt;/div&gt;</td>
+                        <td>Bloc</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;aside&gt; &lt;/aside&gt;</td>
+                        <td>Bloc </td>
+                    </tr>
+                    <tr>
+                        <td>&lt;section&gt; &lt;/section&gt;</td>
+                        <td>Bloc</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;ul&gt; &lt;/ul&gt;</td>
+                        <td>Liste non ordonnée</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;ol&gt; &lt;/ol&gt;</td>
+                        <td>Liste ordonnée</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;li&gt; &lt;/li&gt;</td>
+                        <td>Element d'une liste</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;nav&gt; &lt;/nav&gt;</td>
+                        <td>Barre de navigation</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;header&gt; &lt;/header&gt;</td>
+                        <td>En-tête d'une section</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;footer&gt; &lt;/footer&gt;</td>
+                        <td>Pied de page</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;span&gt; &lt;/span&gt;</td>
+                        <td>Balise indiquant du texte</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;strong&gt; &lt;/strong&gt;</td>
+                        <td>Indique que le texte contenu est de haute importance</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;em&gt; &lt;/em&gt;</td>
+                        <td>Indique que le texte contenu est important</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;head&gt; &lt;/head&gt;</td>
+                        <td>Balise contenant les métadonnées de la page</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;body&gt; &lt;/body&gt;</td>
+                        <td>Balise encadrant le contenu de la page</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;textarea&gt; &lt;/textarea&gt;</td>
+                        <td>Champ dans lequel l'utilisateur entre une quantité de texte relativement importante</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;button&gt; &lt;/button&gt;</td>
+                        <td>Bouton</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;input /&gt;</td>
+                        <td>Champ dans lequel l'utilisateur entre du texte, généralement un unique élément</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;img /&gt;</td>
+                        <td>Insertion d'une image. On utilise l'attribut "src" afin de préciser le chemin d'accès à l'image</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;br /&gt;</td>
+                        <td>Retour à la ligne</td>
+                    </tr>
+                </table>
             </div>
         </div>
         <footer>
-            <span>19-03-22  03:12</span>
+            <span>started the 19<sup>th</sup> of March 2022 at 03:12</span>
             <span>Made by Ngume</span>
-            <span>best wishes</span>
+            <span>not ended yet</span>
         </footer>
     </body>
 </html>

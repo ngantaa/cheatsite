@@ -13,12 +13,6 @@
                         <a href="./index.html">Accueil</a>
                     </li>
                     <li>
-                        <a href="" class="disabled">Bash</a>
-                    </li>
-                    <li>
-                        <a href="./sql.html">SQL</a>
-                    </li>
-                    <li>
                         <a href="./html.html">HTML</a>
                     </li>
                     <li>
@@ -26,6 +20,12 @@
                     </li>
                     <li>
                         <a href="./js.html">JavaScript</a>
+                    </li>
+                    <li>
+                        <a href="" class="disabled">Bash</a>
+                    </li>
+                    <li>
+                        <a href="./sql.html">SQL</a>
                     </li>
                 </ul>
             </nav>
@@ -39,37 +39,54 @@
                 <h1>Introduction au langage Bash</h1>
                 <h2>Qu'est ce que le Bash ?</h2>
                 <p>
-                    Le bash est un langage de programmation destiné à l'exécution de commandes. C'est une interface faisant le lien entre le noyau
-                    d'un système d'exploitation et un utilisateur, raison pour laquelle ce language est également un shell.<br />
-                    Formelleent, un shell est une couche logicielle, c'est à dire un programme qui permet l'accès aux services du système d'exploitation
-                    à un utilisateur ou à d'autres programmes.
-                    Sur un système linux ou macintosh, le bash l'interpréteur de commandes utilisé utilisé par défaut.
+                    Le bash est un langage de programmation destiné à l'exécution de commandes. C'est également un shell, c'est à dire un interpréteur de commandes faisant le lien entre le noyau
+                    d'un système d'exploitation et l'utilisateur.<br />
+                    Formellement, un shell est un programme qui permet l'accès aux services du système d'exploitation à un utilisateur ou à d'autres programmes.
+                    Sur un système linux ou macintosh, le bash l'interpréteur de commandes utilisé utilisé par défaut.<br />
+                    C'est un langage de programmation orienté chaînes de caractères, c'est à dire destiné principalement au traitement de texte, et le bash est sensible à la casse, c'est à dire faisant la distinction entre majuscules et minuscules.
                 </p>
                 <h2>Commandes courantes</h2>
                 <table>
                     <tr>
                         <td>pwd</td>
-                        <td>Affiche le chemin d'accès du répertoire courant</td>
+                        <td>Affiche le chemin d'accès du répertoire courant.</td>
                     </tr>
                     <tr>
                         <td>cd [chemin]</td>
-                        <td>Change le répertoire courant par celui indiqué en argument</td>
-                    </tr>
-                    <tr>
-                        <td>ls [chemin]</td>
-                        <td>Affiche les informations relatives aux fichiers passés en arguments. Sans arguments, la commande s'applique à l'ensemble des fichiers du répertoire courant.<br />
-                        OPTIONS :<br />
-                        -a/--all s'applique également aux fichiers cachés, c'est à dire dont le nom commence par "."<br />
-                        -l 
-                    </td>
+                        <td>Change le répertoire courant par celui indiqué en argument.</td>
                     </tr>
                     <tr>
                         <td>mkdir [nom_repertoire]</td>
-                        <td>Crée un dossier</td>
+                        <td>Crée un dossier.</td>
+                    </tr>
+                    <tr>
+                        <td>ls [fichier]</td>
+                        <td>Affiche les informations relatives aux fichiers passés en arguments. Lorsque l'argument est un dossier et non un fichier, cette commande s'applique aux fichiers contenus dans le répertoire. Sans arguments, la commande s'applique à l'ensemble des fichiers du répertoire courant.<br /><br />
+                        OPTIONS :<br />
+                        <p>
+                        -a/--all s'applique également aux fichiers cachés, c'est à dire dont le nom commence par ".".<br />
+                        -l affiche pour chaqe fichier : le type du fichier, les permissions d'accès, le nombre de liens physiques, le nom du propriétaire, le nom du groupe, la taille du fichier en octets, et la date de dernière modification.<br />
+                        -h affiche la taille du fichier de manière plus lisible, c'est à dire en Ko, Mo, Go au lieu d'afficher seulement le nombre d'octets.<br />
+                        -t trie le résultat par date de dernière modification décroissante.<br />
+                        -r renverse l'ordre du résultat.<br />
+                        -1 affiche uniquement 1 fichier par ligne<br />
+                        -i affiche le numéro d'inode du fichier, qui est un numéro unique associé à un fichier lors de sa création et en permettant l'identifiant.
+                        </p>
+                    </td>
                     </tr>
                     <tr>
                         <td>cp [fichier] [destination]</td>
-                        <td>Copie un fichier ou un dossier vers le chemin indiqué</td>
+                        <td>Copie un fichier ou un dossier vers le chemin indiqué. Par défaut, la commande ignore les liens symbolique, mais copie le fichier d'origine à la place d'un lien. 
+                            Il est également possible de donner un nom différent à la copie en indiquant à la suite du chemin le nom souhaité (ex : "cp image.jpg ./Images/nouveauNom.jpg")<br /><br />
+                            OPTIONS :<br />
+                            <p>
+                            -i demande une confirmation avant l'écrasement d'un fichier.<br />
+                            -b/--backup crée automatiquement une archive avant d'écraser un fichier<br />
+                            -r autorise la copie d'un dossier et de son contenu.<br />
+                            -d préserve les liens symboliques.<br />
+                            -p par défaut, la copie se voit attribuer pour propriétaire et pour groupe ceux de l'utilisateur exécutant la commande "cp", et la date de dernière modification est la date d'exécution de la commande. L'option -p permet de préserver les propriétés d'origine du fichier copié.
+                            </p>
+                        </td>
                     </tr>
                     <tr>
                         <td>mv [fichier] [destination]</td>
@@ -77,23 +94,66 @@
                     </tr>
                     <tr>
                         <td>rm [fichier]</td>
-                        <td>supprime le fichier indiqué</td>
+                        <td>supprime le fichier indiqué.<br /><br />
+                            OPTIONS :<br />
+                            <p>
+                            -r autorise la suppression d'un dossier et de son contenu.<br />
+                            -f/--force ignore les fichiers non existants et ne demande aucune confirmation.<br />
+                            -i demande une confirmation avant la suppression.<br />
+                            -I demande une seule confirmation avant la suppression d'au moins 3 fichiers.
+                            </p>
+                        </td>
                     </tr>
                     <tr>
-                        <td>find</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>grep</td>
-                        <td></td>
+                        <td>find [dossiers] [critère de recherche]</td>
+                        <td>recherche un fichier dans un dossier et les sous-dossiers contenus.
+                            OPTIONS :<br />
+                            <p>
+                            -iname ignore la casse lors de la recherche
+                            -type [d,f,l,b] recherche un fichier avec une restriction sur le type (d : dossier, f : simple fichier, l : lien symbolique, b : block special files).<br />
+                            -size [+/-][ckMG] recherche un fichier avec une restriction sur la taille (+ ou - pour des fichiers plus ou moins grand que la taille indiquée, et pour les unités, c : octet, k : Kibioctet = 1024 octets, M : Mibioctet = 1024*1024 octets, G : Gibioctet = 1024*1024*1024 octets).<br />
+                            -exec [commande \;] execute la commande entrée pour chaque fichier correspondant aux critères de recherche. Il est possible d'utiliser les caractères "{}" pour désigner le nom du fichier trouvé dans cette commande.<br />
+                            </p>
+                        </td>
                     </tr>
                     <tr>
                         <td>chmod [fichier]</td>
-                        <td>Rend le fichier exécutable.</td>
+                        <td>Change le mode d'un fichier, c'est à dire les droits en lecture, écriture ou exécution.
+                            OPTIONS :<br />
+                            <p>
+                            [u,g,o,a] définit l'utilisateur affecté par le changement de mode (u : user, g : group, o : others, a : all).<br />
+                            [+/-] indique si le droit doit être ajouté ou enlevé.<br />
+                            [r,w,x] indique le droit devant être ajouté ou enlevé (r : droit en lecture, w : droit en écriture, x : droit d'exécution)
+                            [4,2,1,0] indique les nouvelles permissions attribuées. Le chiffre 4 correspond aux droits en lecture, le chiffre 2 aux droits en écriture, et le chiffre 1 aux droits 
+                            d'exécution. Le chiffre 0 correspond à l'absence de droits. Cette option remplace la notation "chmod [utilisateur affecté][+/-][r/w/x/][fichier]" ; à la place, on écrit "chmod ### [fichier]" 
+                            en remplaçant chaque dièse par un chiffre, valant 0, 1, 2, 3, 4, 5, 6 ou 7. Le premier chiffre correspond aux droits attribués à l'utilisateur, le second aux droits du groupe, et le troisième 
+                            aux droits de tous les autres. Le chiffre sera interpreté en fonction de sa valeur, qui correspond à la somme des nombres (4, 2, 1, 0) présentés précédemment.<br />
+                            -R indique que la modification doit s'appliquer au dossier et à l'ensemble de son contenu.<br />
+                            
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>chown [fichier] [nouveau propriétaire]:[nouveau groupe]</td>
+                        <td>Change le propriétaire d'un fichier. Cette commande nécessite les droits d'administration.
+                            OPTIONS :<br />
+                            <p>
+                            -iname ignore la casse lors de la recherche
+                            -type [d,f,l,b] recherche un fichier avec une restriction sur le type (d : dossier, f : simple fichier, l : lien symbolique, b : block special files).<br />
+                            -size [+/-][ckMG] recherche un fichier avec une restriction sur la taille (+ ou - pour des fichiers plus ou moins grand que la taille indiquée, et pour les unités, c : octet, k : Kibioctet = 1024 octets, M : Mibioctet = 1024*1024 octets, G : Gibioctet = 1024*1024*1024 octets).<br />
+                            -exec [commande \;] execute la commande entrée pour chaque fichier correspondant aux critères de recherche. Il est possible d'utiliser les caractères "{}" pour désigner le nom du fichier trouvé dans cette commande.<br />
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>grep</td>
+                        <td>Cherche un modèle dans un fichier.
+
+                        </td>
                     </tr>
                     <tr>
                         <td>cat [fichier]</td>
-                        <td>Affiche les premières lignes du fichier</td>
+                        <td>Lit le contenu d'un fichier et l'affiche sur la sortie standard.</td>
                     </tr>
                     <tr>
                         <td></td>
