@@ -42,7 +42,7 @@ nav ul li a {
     font-weight: bold;
     text-decoration: none;
     padding: 10px;
-    border-radius: 3px;
+    border-radius: 2px;
     border: 1px solid #111;
 }
 
@@ -59,17 +59,66 @@ nav ul li a:hover {
 
 #ban1 {
     background-color: #50f;
-    min-height: 20px;
 }
 
 #ban2 {
-    background-color: #070;
-    min-height: 20px;
+    background-color: #50fe;
 }
 
 #ban3 {
-    background-color: #c11;
-    min-height: 20px;
+    background-color: #50fd;
+}
+
+#ban4 {
+    background-color: #50fc;
+}
+
+#ban5 {
+    background-color: #50fb;
+}
+
+#ban6 {
+    background-color: #50fa;
+}
+
+#ban7 {
+    background-color: #50f9;
+}
+
+#ban8 {
+    background-color: #50f8;
+}
+
+#ban9 {
+    background-color: #50f7;
+}
+
+#ban10 {
+    background-color: #50f6;
+}
+
+#ban11 {
+    background-color: #50f5;
+}
+
+#ban12 {
+    background-color: #50f4;
+}
+
+#ban13 {
+    background-color: #50f3;
+}
+
+#ban14 {
+    background-color: #50f2;
+}
+
+#ban15 {
+    background-color: #50f1;
+}
+
+#ban1, #ban2, #ban3, #ban4, #ban5, #ban6, #ban7, #ban8, #ban9, #ban10, #ban11, #ban12, #ban13, #ban14, #ban15 {
+    min-height: 4px;
 }
 
 .main-content {
@@ -80,8 +129,13 @@ nav ul li a:hover {
 }
 
 pre {
-    max-width: 50%;
+    width: 100%;
+    text-align: center;
     margin: auto;
+}
+
+code {
+    background-color: #ddd;
 }
 
 table {
@@ -97,11 +151,7 @@ tr :nth-child(1) {
 
 td {
     padding: 5px;
-    border: 1px solid #269;
-}
-
-code {
-    background-color: #ddd;
+    border: 1px solid #0b2094;
 }
 
 p {
@@ -113,7 +163,7 @@ ol {
 }
 
 h1 {
-    border: 1px solid #269;
+    border: 1px solid #0b2094;
     border-radius: 0 10px 0 10px;
     font-size: 35px;
     line-height: 40px;
@@ -121,9 +171,14 @@ h1 {
 }
 
 h2 {
-    border-bottom: 1px solid #269;
+    border-bottom: 1px solid #0b2094;
     margin-left: 45px;
     margin-right: 45px;
+}
+
+h3 {
+    margin-left: 60px;
+    color: #0b2094;
 }
 
 footer {

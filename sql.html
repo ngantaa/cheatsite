@@ -35,13 +35,93 @@
             </div>
             <div id="ban3">
             </div>
+            <div id="ban4">
+            </div>
+            <div id="ban5">
+            </div>
+            <div id="ban6">
+            </div>
+            <div id="ban7">
+            </div>
+            <div id="ban8">
+            </div>
+            <div id="ban9">
+            </div>
+            <div id="ban10">
+            </div>
+            <div id="ban11">
+            </div>
+            <div id="ban12">
+            </div>
+            <div id="ban13">
+            </div>
+            <div id="ban14">
+            </div>
+            <div id="ban15">
+            </div>
             <div class="main-content">
                 <h1>Introduction au langage SQL</h1>
                 <h2>Qu'est ce que le SQL</h2>
-                Le SQL, pour Structured Query Language, est un langage informatique destiné à l'exploitation des bases de données relationnelles.
-                Il permet la création, l'organisation, la modification, suppression de données ainsi que l'implémentation de contrôles d'accès visant à restreindre l'accès de certaines données.<br />
-                C'est un langage qui n'est pas sensible à la casse, c'est à dire dont l'écriture peut se faire indifféremment en majuscules ou en minuscules. Ainsi, "User", "USER" et "user" désigneront le même objet.
-                
+                <p>
+                    Le SQL, pour Structured Query Language, est un langage informatique destiné à l'exploitation des bases de données relationnelles. Une base de donnée est un ensemble d'informations organisées. Une base de donnée est dite relationnelle 
+                    lorsque les informations qu'elle contient peuvent être organisées sous forme de tableau à deux dimensions appelé tables. Le SQL est donc un langage crée dans l'optique d'interagir avec les bases de données relationelles de façon à en
+                    permettre le traitement.<br />
+                    Ce langage permet la création, l'organisation, la modification, suppression de données ainsi que l'implémentation de contrôles d'accès visant à restreindre l'accès de certaines données.<br />
+                    C'est un langage qui n'est pas sensible à la casse, c'est à dire dont l'écriture peut se faire indifféremment en majuscules ou en minuscules. Ainsi, "User", "USER" et "user" désigneront le même objet.<br /><br />
+                </p>
+                <h2>Créer une table</h2>
+<pre>
+<code>
+                                       
+    CREATE TABLE users (               
+        id INT PRIMARY KEY NOT NULL,   
+        firstname VARCHAR(100),        
+        lastname VARCHAR(100),         
+        email VARCHAR(255),            
+        dateofbirth DATE,              
+        createdat TIMESTAMP            
+    )                                  
+                                       </code>
+</pre>
+            <p>
+                Cet exemple nous permet d'introduire quelques types de données. Le premier champ de la table "users" que l'on crée est un nombre entier donc nous ajoutons "INT" pour "INTEGER" après avoir indiqué le nom 
+                du champ. Nous voyons ensuite un autre type à la ligne d'en dessous où est indiqué "VARCHAR(100)". "VARCHAR" correspond à une chaîne de caractères (donc à du texte) et le nombre renseigné entre parenthèses 
+                correspond au nombre maximal de caractères que la base de donnée prévoit pour le champ.<br />
+                Nous avons ensuite un type "DATE" dont le nom et assez explicite, et enfin un type "TIMESTAMP" correspondant à une date très précise (date, heure, minutes et secondes.)<br /><br />
+                Cet exemple fait également apparaître les options "PRIMARY KEY" et "NOT NULL".<br />
+                La clé primaire est la colonne permettant d'identifier de manière unique un enregistrement de la table. La clé primaire doit donc être affectée à une colonne dont on sait à l'avance qu'elle ne comportera pas de doublons. 
+                L'option "NOT NULL" indique que le champ est requis. Si l'on essaie par la suite d'ajouter une ligne à cette table sans indiquer d'id, le SGBD nous renverra une erreur et la ligne ne sera pas ajoutée.
+            </p>
+            </div>
+            <div id="ban15">
+            </div>
+            <div id="ban14">
+            </div>
+            <div id="ban13">
+            </div>
+            <div id="ban12">
+            </div>
+            <div id="ban11">
+            </div>
+            <div id="ban10">
+            </div>
+            <div id="ban9">
+            </div>
+            <div id="ban8">
+            </div>
+            <div id="ban7">
+            </div>
+            <div id="ban6">
+            </div>
+            <div id="ban5">
+            </div>
+            <div id="ban4">
+            </div>
+            <div id="ban3">
+            </div>
+            <div id="ban2">
+            </div>
+            <div id="ban1">
             </div>
         </div>
         <footer>
